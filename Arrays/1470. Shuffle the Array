@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        vector<int> arr1(nums.begin(), nums.begin() + n);  // Copy the first half of nums to arr1
+        vector<int> arr2(nums.begin() + n, nums.end());    // Copy the second half of nums to arr2
+
+        vector<int> res;
+        for (int i = 0; i < n; i++) {
+            res.push_back(arr1[i]);  // Add elements from arr1 to the result vector
+            res.push_back(arr2[i]);  // Add elements from arr2 to the result vector
+        }
+
+        return res;
+    }
+};
