@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+string reverse(int i,int j, string s){
+    while(i < j){
+        swap(s[i],s[j]);
+        i++;
+        j--;
+        reverse(i,j,s);
+    }
+    return s;
+}
+int main() {
+    // Write C++ code here
+    string s = "abcde";
+    int i = 0;
+    int j = s.length() -1;
+    string ans  =  reverse( i, j , s);
+    cout << ans << endl;
+    return 0;
+}
